@@ -25,7 +25,7 @@ public class FolderInfo {
 
     @Override
     public String toString() {
-        return String.format("Path :: %s; Counted files :: %s;%n",
+        return String.format("Path :: %s; Files quantity :: %n",
                 getPath(),
                 getCountedFiles());
     }

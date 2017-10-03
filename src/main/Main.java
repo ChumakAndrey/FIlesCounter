@@ -1,15 +1,15 @@
 package main;
 
-import utils.UtilsImpl;
+import utils.FilesCounter;
 
 /**
  * Created by Администратор on 02.10.2017.
  */
 public class Main {
     public static void main(String[] args){
-        UtilsImpl utils = new UtilsImpl();
+        FilesCounter filesCounter = new FilesCounter();
 
-        System.out.println(utils.amountOfFiles("C:\\Java\\TestTask"));
+        System.out.println(filesCounter.amountOfFiles("C:\\Java\\TestTask"));
     }
 
 }
