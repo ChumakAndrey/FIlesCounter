@@ -11,6 +11,7 @@ import java.util.List;
  * Created by Администратор on 03.10.2017.
  */
 public final class FileWriter {
+
     public static void writeToFile(List<FolderInfo> folderInfoList, String path){
         File file = new File(path);
         String directoryInfo;
