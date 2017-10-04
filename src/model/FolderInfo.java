@@ -7,6 +7,11 @@ public class FolderInfo {
     private String path;
     private long countedFiles;
 
+    public FolderInfo(String path, long countedFiles) {
+        this.path = path;
+        this.countedFiles = countedFiles;
+    }
+
     public String getPath() {
         return path;
     }
@@ -25,7 +30,7 @@ public class FolderInfo {
 
     @Override
     public String toString() {
-        return String.format("Path :: %s; Counted files :: %s;%n",
+        return String.format("Path :: %s; Files quantity :: %n",
                 getPath(),
                 getCountedFiles());
     }
