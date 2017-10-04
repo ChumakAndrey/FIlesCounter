@@ -15,18 +15,18 @@ public class UtilsImpl implements Utils {
      **/
     @Override
     public long amountOfFiles(String path) {
-
         File folder = new File(path);
+        if (folder.exists()){
         File[] fileArray = folder.listFiles();
-        for(File file : fileArray){
-            if(file.isDirectory()){
+        for(File file : fileArray) {
+            if (file.isDirectory()) {
                 countedFiles = amountOfFiles(file.getPath());
-            }
-            else {
+            } else {
                 countedFiles++;
             }
-
-
+        }
+        } else{
+            System.out.println("Directory " + path + " doesn't exist. Please check it.");
         }
         return countedFiles;
     }
