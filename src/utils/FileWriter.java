@@ -18,18 +18,20 @@ public final class FileWriter {
         PrintWriter printWriter;
 
         try{
-            if(!file.exists()){
+            /*if(!file.exists()){
                 file.createNewFile();
-            }
+            }*/
 
             printWriter = new PrintWriter(file.getAbsoluteFile());
-
+            int i = 1;
             try{
                 for(FolderInfo info : folderInfoList) {
-                    directoryInfo = String.format("%s :: %s",
-                                                    info.getPath(),
-                                                    info.getCountedFiles());
+
+                    directoryInfo = String.format("%d) %s;",
+                            i++,
+                            info.toString());
                     printWriter.println(directoryInfo);
+                    System.out.println(directoryInfo);
                 }
             } finally {
                 printWriter.close();
@@ -39,4 +41,6 @@ public final class FileWriter {
         }
 
     }
+
+
 }

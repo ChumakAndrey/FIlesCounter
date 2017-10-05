@@ -30,7 +30,7 @@ public class FolderInfo {
 
     @Override
     public String toString() {
-        return String.format("Path :: %s; Files quantity :: %n",
+        return String.format("Path - %s, Files quantity - %d;",
                 getPath(),
                 getCountedFiles());
     }

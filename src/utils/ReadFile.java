@@ -1,7 +1,5 @@
 package utils;
 
-import model.FolderInfo;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,17 +13,16 @@ public final class ReadFile {
 
     public static List<String> readTxtFile(String txtPath) {
         List<String> pathList = new ArrayList<>();
-        String path;
         BufferedReader bufferedReader = null;
         try{
-            bufferedReader = new BufferedReader(new java.io.FileReader(txtPath));
-            path = bufferedReader.readLine();
-            while(path!=null){
+            bufferedReader = new BufferedReader(new FileReader(txtPath));
+            String path = null;
+            while((path = bufferedReader.readLine())!=null){
                 pathList.add(path);
             }
             bufferedReader.close();
         } catch (Exception e) {
-            System.out.println("Wrong txt file path");
+            e.getMessage();
             pathList = null;
         } finally {
             try {
